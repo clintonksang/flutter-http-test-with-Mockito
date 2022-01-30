@@ -1,5 +1,5 @@
 # flutterdevtest
-
+[![codecov](https://codecov.io/gh/clintonksang/flutter-http-unit-test-with-Mockito/branch/master/graph/badge.svg?token=SXCZJCN1P1)](https://codecov.io/gh/clintonksang/flutter-http-unit-test-with-Mockito)
 A new Flutter project.
 
 ## Getting Started
