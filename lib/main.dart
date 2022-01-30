@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdevtest/models/user.dart';
-import 'package:flutterdevtest/services/album_service.dart';
+import 'package:flutterdevtest/services/fetch_album.dart';
 import 'package:flutterdevtest/services/user_service.dart';
 import 'package:http/http.dart' as http;
 import 'models/album_model.dart';
@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late Future<List<User>> futureUser;
+  late Future<List<Users>> futureUser;
   @override
   void initState() {
     // TODO: implement initState
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: FutureBuilder<List<User>>(
+      body: FutureBuilder<List<Users>>(
         // future: fetchusers(http.Client()),
         future: futureUser,
         builder: (context, snapshot) {

@@ -5,14 +5,14 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-List<User> welcomeFromJson(String str) =>
-    List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
+List<Users> welcomeFromJson(String str) =>
+    List<Users>.from(json.decode(str).map((x) => Users.fromJson(x)));
 
-String welcomeToJson(List<User> data) =>
+String welcomeToJson(List<Users> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class User {
-  User({
+class Users {
+  Users({
     required this.id,
     required this.name,
     required this.username,
@@ -32,7 +32,7 @@ class User {
   String website;
   Company company;
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
+  factory Users.fromJson(Map<String, dynamic> json) => Users(
         id: json["id"],
         name: json["name"],
         username: json["username"],

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutterdevtest/constants/constants.dart';
+import 'package:flutterdevtest/utils/constants.dart';
 import 'package:flutterdevtest/models/album_model.dart';
-import 'package:flutterdevtest/services/album_service.dart';
+import 'package:flutterdevtest/services/fetch_album.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -21,6 +21,8 @@ void main() {
 
       expect(await fetchAlbum(), isA<Album>());
     });
+
+    // write a test for post method
   });
 }
 

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutterdevtest/constants/constants.dart';
+import 'package:flutterdevtest/utils/constants.dart';
 import 'package:flutterdevtest/models/album_model.dart';
 import 'package:http/http.dart' as http;
 

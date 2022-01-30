@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutterdevtest/constants/constants.dart';
+import 'package:flutterdevtest/utils/constants.dart';
 import 'package:flutterdevtest/models/user.dart';
 import 'package:http/http.dart' as http;
 
@@ -12,13 +12,13 @@ import 'package:http/http.dart' as http;
 //   return users;
 // }
 // A function that converts a response body into a List<User>.
-List<User> parseUsers(String responseBody) {
+List<Users> parseUsers(String responseBody) {
   final parsed = jsonDecode(responseBody).cast<Map<String, dynamic>>();
 
-  return parsed.map<User>((json) => User.fromJson(json)).toList();
+  return parsed.map<Users>((json) => Users.fromJson(json)).toList();
 }
 
-Future<List<User>> fetchUsers() async {
+Future<List<Users>> fetchUsers() async {
   final response = await http.get(Uri.parse(userUrl));
   if (response.statusCode == 200) {
     return compute(parseUsers, response.body);
