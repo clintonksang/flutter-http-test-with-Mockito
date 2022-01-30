@@ -24,9 +24,6 @@ jobs:
     - name : Flutter Analyze
       run  : flutter analyze
 
-    - name : Run Test  
-      run  : flutter test
-
     - name : Run Test Coverage 
       run  : flutter test --coverage
 
