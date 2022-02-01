@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyWidget extends StatelessWidget {
-  const MyWidget({
-    Key? key,
-    required this.title,
-    required this.message,
-  }) : super(key: key);
-
-  final String title;
-  final String message;
+  const MyWidget() : super();
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +9,21 @@ class MyWidget extends StatelessWidget {
       title: 'Flutter Widget Test',
       home: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text("title"),
         ),
-        body: Center(
-          child: Text(message),
+        body: Column(
+          children: const [
+            ListTile(
+              key: Key("key1"),
+              tileColor: Colors.red,
+              title: Text('Tile1'),
+            ),
+            ListTile(
+              key: Key("key2"),
+              tileColor: Colors.blue,
+              title: Text('Tile1'),
+            )
+          ],
         ),
       ),
     );
