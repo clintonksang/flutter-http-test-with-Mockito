@@ -5,8 +5,8 @@ void main() {
   testWidgets('Finds title, message', (WidgetTester tester) async {
     await tester.pumpWidget(const MyWidget());
 
-    final titleFinder = find.text('T');
-    final messageFinder = find.text('M');
+    final titleFinder = find.text('Finds title');
+    final messageFinder = find.text('message');
 
     expect(titleFinder, findsOneWidget);
     expect(messageFinder, findsOneWidget);
