@@ -1,4 +1,4 @@
-# Unit test for HTTP with Mockito
+# Unit and Widget test for HTTP with Mockito
 This is a "HTTP Mock test" for flutter using package `mockito` and `build_runner`.
 
 # 1. Steps Clone repository
